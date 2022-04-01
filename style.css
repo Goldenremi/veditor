@@ -1,118 +1,144 @@
- *{
- 	box-sizing: border-box;
- 	 	margin: 0;
- 	padding: 0;
- }
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
-html{
-	font-family: 'lato', sans-serif;
+html {
+	font-family: "lato", sans-serif;
 	background-color: black;
 	color: white;
-	font-size: .8rem;
+	font-size: 0.75rem;
 }
 
-.header,.main
-{	grid-gap: .8rem;
+.header,
+.main {
+	grid-gap: 0.8rem;
 	display: grid;
 	align-items: center;
- 	grid-template-columns: 22.5fr 55fr 22.5fr;
+	grid-template-columns: 22.5fr 55fr 22.5fr;
+	padding: 0 1.4rem;
 }
 
-.header__top-right{
+.header__top-right {
 	display: flex;
 	padding: 0 1rem;
 	align-items: center;
 }
 
-.header__top-middle{
-	font-size: .75rem;
+.header__top-middle {
+	font-size: 0.75rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.header__top-left{
+.header__top-left {
 	padding: 0 1rem;
 	justify-self: end;
 }
 
-.main{
+.main {
 	background-color: #333;
-	padding: .8rem 1.4rem;
-	grid-template-rows: 70vh;
+	padding: 3rem 1.4rem;
+	grid-template-rows: 60vh;
 }
 
-
-
-.main>section{
+.main > section {
 	background-color: black;
 	height: 70vh;
 	border-radius: 8px;
 	overflow: auto;
 }
 
-.main-tutorial{
-	padding: 1.2rem 0; 
+.main-tutorial,
+.main-browse {
+	padding: 1.2rem 0;
 }
 
-.main-tutorial img{
-	height: 70px;
+.main-tutorial img,
+.main-browse img {
+	height: 60px;
 }
 
-.main-tutorial>div{
-	margin: .8rem;
+.main-tutorial > div,
+.main-browse > div {
+	margin: 1.2rem;
 	display: flex;
 	align-items: center;
 	border-bottom: 1px solid #888;
-	padding-bottom: .8rem;
+	padding-bottom: 1.2rem;
 }
 
-.main-tutorial>div>div{
+.main-tutorial > div > div {
 	padding: 1rem;
 }
 
-
-div.main-tutorial-header{
+div.main-tutorial-header {
 	flex-direction: column;
 	border: none;
+	align-items: flex-start;
 }
 
-.main-video-thumbnail{
-	width :100%;
+.main-video-thumbnail {
+	width: 100%;
 }
 
-.main-tutorial-button{
+.main-tutorial-button {
 	background-color: black;
 	color: white;
-	width:  100%;
-	padding: .5rem 1rem;
+	width: 100%;
+	padding: 0.5rem 1rem;
 	border: 2px solid white;
 	border-radius: 16px;
 	text-align: center;
 }
 
-.main-tutorial>.main-tutorial-button-div{
+.main-tutorial > .main-tutorial-button-div {
 	border: none;
 	padding: 0 1rem;
-
 }
 
-
-
-
-
-.main-video video{
+.main-video video {
 	width: 100%;
 }
 
-
-
-::-webkit-scrollbar{
+::-webkit-scrollbar {
 	width: 6px;
 }
 
-
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
 	background-color: #888;
 	border-radius: 5px;
+}
+
+.main-browse > div {
+	display: grid;
+	grid-template-rows: 2rem 2rem;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.main-browse > div img {
+	grid-row-end: span 2;
+}
+
+.main-browse > div h4 {
+	grid-column-end: span 3;
+}
+
+.music-details {
+	grid-column-end: span 4;
+}
+
+.button-use {
+	display: none;
+}
+
+div.main-browse-header {
+	grid-template-columns: 4fr 1fr;
+	grid-template-rows: 1fr;
+}
+
+.dev-progress {
+	grid-column: 1 / span 5;
 }
