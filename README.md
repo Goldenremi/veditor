@@ -1,3 +1,3 @@
-# Veditor
+# veditor
 
-https://goldenremi.github.io/Veditor/
+https://goldenremi.github.io/veditor/
