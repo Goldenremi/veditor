@@ -1,3 +1,9 @@
+@font-face{
+	font-family:"cerebri_sans_book"; 
+	src:url('./fonts/cerebri_sans_book.ttf') format("truetype");
+}
+
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -5,7 +11,7 @@
 }
 
 html {
-	font-family: "lato", sans-serif;
+	font-family: "cerebri_sans_book" , "lato", sans-serif;
 	background-color: black;
 	color: white;
 	font-size: 0.75rem;
@@ -16,39 +22,69 @@ html {
 	grid-gap: 0.8rem;
 	display: grid;
 	align-items: center;
+	align-content: center;
 	grid-template-columns: 22.5fr 55fr 22.5fr;
 	padding: 0 1.4rem;
 }
 
-.header__top-right {
+.header{
+	height: 5rem;
+}
+
+.header__top-left {
 	display: flex;
 	padding: 0 1rem;
 	align-items: center;
 }
 
+.header__top-left h1{
+	margin: 1rem;
+	vertical-align: middle;
+}
+
+.header__top-left span {
+	margin: .8rem;
+	color: black;
+}
+
+.header__top-right img {
+position: static;
+height: 4rem;
+width: 4rem;
+}
+
+.header__top-right {
+	padding: 0 1rem;
+	justify-self: end;
+}
+
+
+
 .header__top-middle {
-	font-size: 0.75rem;
+	font-size: 0.9rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.header__top-left {
-	padding: 0 1rem;
-	justify-self: end;
+.header__top-middle div {
+	text-align: center;
 }
+
+
 
 .main {
 	background-color: #333;
-	padding: 3rem 1.4rem;
-	grid-template-rows: 60vh;
+	margin: .1rem 0;
+	grid-template-rows: 68vh;
 }
 
 .main > section {
-	background-color: black;
-	height: 70vh;
+	background-color: #080808;
+	height: 65vh;
 	border-radius: 8px;
 	overflow: auto;
+	font-size: 1.3rem;
 }
 
 .main-tutorial,
@@ -58,15 +94,24 @@ html {
 
 .main-tutorial img,
 .main-browse img {
-	height: 60px;
+	height: 70px;
+}
+
+.tutorial-overlay{
+	position: absolute;
+	top: 33px;
+	bottom:0 ;
+	left: 30px;
+	right: 0;
 }
 
 .main-tutorial > div,
 .main-browse > div {
-	margin: 1.2rem;
+	position: relative;
+	margin: 1.5rem;
 	display: flex;
 	align-items: center;
-	border-bottom: 1px solid #888;
+	border-bottom: 1px solid #E8DEDE24;
 	padding-bottom: 1.2rem;
 }
 
@@ -78,6 +123,11 @@ div.main-tutorial-header {
 	flex-direction: column;
 	border: none;
 	align-items: flex-start;
+	height: 3rem;
+}
+
+.main-tutorial span{
+	color: #BABABA;
 }
 
 .main-video-thumbnail {
@@ -85,7 +135,7 @@ div.main-tutorial-header {
 }
 
 .main-tutorial-button {
-	background-color: black;
+	background-color: #050505;
 	color: white;
 	width: 100%;
 	padding: 0.5rem 1rem;
@@ -108,7 +158,7 @@ div.main-tutorial-header {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #888;
+	background-color: #BFBFBF;
 	border-radius: 5px;
 }
 
