@@ -5,14 +5,17 @@
  }
 
 html{
+	font-family: 'lato', sans-serif;
 	background-color: black;
 	color: white;
+	font-size: .8rem;
 }
 
-.header,.main{
+.header,.main
+{	grid-gap: .8rem;
 	display: grid;
 	align-items: center;
- 	grid-template-columns: 25fr 50fr 25fr;
+ 	grid-template-columns: 22.5fr 55fr 22.5fr;
 }
 
 .header__top-right{
@@ -34,7 +37,6 @@ html{
 }
 
 .main{
-	grid-gap: .8rem;
 	background-color: #333;
 	padding: .8rem 1.4rem;
 	grid-template-rows: 70vh;
@@ -44,23 +46,73 @@ html{
 
 .main>section{
 	background-color: black;
-	min-height: 70vh;
+	height: 70vh;
 	border-radius: 8px;
+	overflow: auto;
 }
 
 .main-tutorial{
-	padding: 2rem 1.2rem; 
+	padding: 1.2rem 0; 
+}
+
+.main-tutorial img{
+	height: 70px;
 }
 
 .main-tutorial>div{
+	margin: .8rem;
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	height: 60px;
-	border-bottom: 1px solid #333
+	align-items: center;
+	border-bottom: 1px solid #888;
+	padding-bottom: .8rem;
+}
+
+.main-tutorial>div>div{
 	padding: 1rem;
 }
 
+
+div.main-tutorial-header{
+	flex-direction: column;
+	border: none;
+}
+
 .main-video-thumbnail{
+	width :100%;
+}
+
+.main-tutorial-button{
+	background-color: black;
+	color: white;
+	width:  100%;
+	padding: .5rem 1rem;
+	border: 2px solid white;
+	border-radius: 16px;
+	text-align: center;
+}
+
+.main-tutorial>.main-tutorial-button-div{
+	border: none;
+	padding: 0 1rem;
+
+}
+
+
+
+
+
+.main-video video{
 	width: 100%;
+}
+
+
+
+::-webkit-scrollbar{
+	width: 6px;
+}
+
+
+::-webkit-scrollbar-thumb{
+	background-color: #888;
+	border-radius: 5px;
 }
